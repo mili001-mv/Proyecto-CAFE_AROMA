@@ -1,0 +1,375 @@
+/* --HOJA DE ESTILOS DE LA PÁGINA WEB DE LA CAFETERÍA: CAFÉ AROMA-- */
+
+/* SELECTOR PADRE: Variables a utilizar (paleta de colores) */
+:root {
+    --colorPrimario: #7A3F2E;
+    --colorSecundario: #D9A24A;
+    --colorFondoyTextos: #FFFFFF;
+    --colorMenu-Sec: #EBE3D6;
+    --colorSombras: #282D31;
+    --colorDegradado: rgba(0, 0, 0, 0.4);
+    --colorTextos: #2B2B2B;
+    --colorFondoFrases: #F9DEB3;
+    --colorTextosInput: #7c7b7b;
+    --colorCards: #FAF5EC;
+    --colorTextoFooter: #FFD693;
+    --colorCajadeTexto: #F1F0EE;
+    --colorWhatsApp: #25d366;
+}
+
+/* SELECTOR UNIVERSAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* --- SELECTOR DE CLASES --- */
+
+/* 1. ESTILOS MENÚ DE NAVEGACIÓN */
+.icon-whats {
+    font-size: 3em;
+    position: fixed;
+    bottom: 1.5em;
+    right: 1em;
+    background-color: var(--colorWhatsApp);
+    padding: .2em;
+    border-radius: 100%;
+    color: #fff;
+    box-shadow: 0px 0px 5px var(--colorSombras);
+    z-index: 1000;
+}
+
+header {
+    background-color: var(--colorMenu-Sec);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 4px var(--colorSombras);
+}
+
+.menu {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Modern Antiqua';
+}
+
+.img-logo {
+    height: 6em;
+}
+
+.btn-menu {
+    display: none;
+}
+
+.enlaces {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.enlaces a {
+    color: var(--colorTextos);
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1em;
+    font-weight: 500;
+
+}
+
+.enlaces .enlace-ini {
+    color: var(--colorPrimario);
+    background-color: var(--colorTextoFooter);
+    border-radius: 15%;
+    margin: .5em;
+    font-size: 1em;
+    padding: .7em;
+    font-weight: 900;
+}
+
+/* INICIO DE RWD */
+@media screen and (max-width: 1023px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .btn-menu {
+        display: block;
+    }
+
+    .icono-menu {
+        color: var(--colorPrimario);
+        font-size: 2em;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .enlaces {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin-left: auto;
+    }
+}
+
+/* FIN DE RWD */
+/* FIN MENÚ DE NAVEGACIÓN */
+
+/* 2. ESTILOS PÁGINA DE INICIO */
+/* IMAGEN INICIO (HERO) */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center 50%;
+}
+
+.fondo-claro {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background-color: var(--colorDegradado);
+}
+
+.hero-texto {
+    position: relative;
+    z-index: 2;
+}
+
+.frase-h1 {
+    font-family: 'Poetsen One';
+    color: var(--colorFondoyTextos);
+}
+
+.frase-h2 {
+    font-family: 'Poetsen One';
+    color: var(--colorFondoyTextos);
+}
+
+/* FIN IMAGEN INICIO (HERO)*/
+
+.title-1 {
+    font-family: 'Poetsen One';
+    color: var(--colorTextos);
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+.title-2 {
+    font-family: 'Modern Antiqua';
+    color: var(--colorTextos);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+/* ESTILOS CARDS - PRODUCTOS Y CUALIDADES*/
+.cards-grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: var(--colorCards);
+    border-radius: 1em;
+    box-shadow: 0 0 4px var(--colorSombras);
+    margin-bottom: .5em;
+    transition: box-shadow .3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px var(--colorSombras);
+}
+
+.card-img img {
+    width: 100%;
+    height: 200px;
+    /* OBJECT-FIT: Recorta la imagen desde el centro */
+    object-fit: cover;
+    /* OBJECT POSITION: 
+       - center: centrado horizontalmente.
+       - 30%: Lo acomoda, muestra mas arriba la imagen. */
+    object-position: center 30%;
+    border-radius: 1em 1em 0 0;
+}
+
+.card-content {
+    padding: .8em;
+    display: grid;
+}
+
+.card-content a {
+    text-decoration: none;
+}
+
+.card-title {
+    font-family: 'Modern Antiqua';
+    color: var(--colorPrimario);
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: .8em;
+    text-align: left;
+}
+
+.card-info {
+    font-family: 'Modern Antiqua';
+    color: var(--colorTextos);
+    font-size: .9em;
+    margin-bottom: 2em;
+    text-align: left;
+}
+
+.card-content a .title-2 {
+    color: var(--colorPrimario);
+    text-align: left;
+    font-size: 1.2em;
+}
+
+/* FIN ESTILOS CARDS - PRODUCTOS Y CUALIDADES*/
+/* ESTILOS BOTÓN DE "Ver carta completa" */
+.contenedor-boton {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.btn-carta {
+    display: inline-block;
+    background-color: var(--colorPrimario);
+    color: var(--colorFondoyTextos);
+    padding: .5em 1em;
+    border-radius: 2em;
+    text-decoration: none;
+    font-family: 'Modern Antiqua';
+    font-size: 1.3em;
+    transition: box-shadow .3s ease;
+}
+
+.btn-carta:hover {
+    color: var(--colorFondoFrases);
+    box-shadow: 0 0 10px var(--colorSombras);
+}
+
+/* FIN ESTILOS BOTÓN DE "Ver carta completa" */
+
+/* ESTILOS CARDS - CUALIDADES */
+.cards-grid-cualidades {
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-bottom: 4em;
+    border-top: 2px solid var(--colorPrimario);
+    padding-top: 4em;
+}
+
+.cards-grid-cualidades .card-img {
+    text-align: center;
+    padding: 1em;
+}
+
+.icon-cualidades {
+    color: var(--colorPrimario);
+    font-size: 3em;
+    padding: .5em;
+    border-radius: 100%;
+    background-color: var(--colorFondoFrases);
+}
+
+.cards-grid-cualidades .card-title,
+.cards-grid-cualidades .card-info {
+    text-align: center;
+}
+
+/* FIN ESTILOS CARDS - CUALIDADES */
+/* ESTILOS FOOTER */
+.footer {
+    background-color: var(--colorPrimario);
+    padding-top: 2em;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+.footer-box h3,
+.footer-box-horarios h3 {
+    font-family: 'Modern Antiqua';
+    font-size: 1em;
+    color: var(--colorFondoyTextos);
+    margin-bottom: 1em;
+}
+
+.footer-info {
+    font-family: 'Modern Antiqua';
+    font-size: .8em;
+    color: var(--colorTextoFooter);
+    margin-bottom: .5em;
+}
+
+.title-center {
+    text-align: center;
+}
+
+.footer-icons {
+    font-size: 2em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.footer-icons i {
+    color: var(--colorMenu-Sec);
+    transition: color .5s ease;
+}
+
+.footer-icons i:hover {
+    color: var(--colorTextoFooter);
+}
+
+.footer-box-horarios {
+    margin-left: 10em
+}
+
+.footer-copyright {
+    text-align: center;
+    color: var(--colorTextoFooter);
+    border-top: 1px solid var(--colorMenu-Sec);
+    margin-top: 2em;
+    margin-bottom: 0;
+    padding: .5em;
+}
+
+/* FIN ESTILOS FOOTER */
+/* --- FIN ESTILOS PÁGINA DE INICIO --- */
