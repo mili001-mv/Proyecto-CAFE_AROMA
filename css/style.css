@@ -406,6 +406,270 @@ header {
 /* FIN ESTILOS FOOTER */
 /* --- FIN ESTILOS PÁGINA DE INICIO --- */
 
+/* --- INICIO DE LA SECCION DE CARTA --- */
+
+.seccion-carta {
+    font-family: 'Modern Antiqua';
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
+}
+
+.titulo-carta p {
+    min-height: 80px;
+}
+
+.titulo-carta h1,
+.titulo-carta div {
+    text-align: center;
+    font-family: 'Poetsen One';
+}
+
+.titulo-carta h1 {
+    color: var(--colorPrimario);
+}
+
+.titulo-carta div {
+    color: var(--colorSecundario);
+}
+
+.carta-nav {
+    margin: 1em auto;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3em;
+    background-color: var(--colorMenu-Sec);
+    width: max-content;
+}
+
+.categoria,
+.categoria-dif {
+    font-size: 1.5em;
+    font-family: 'Poetsen One';
+    color: var(--colorPrimario);
+    padding: .5em 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.nav-select {
+    background-color: var(--colorTextoFooter);
+    border-radius: 1em;
+    height: 100%;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.carta-card img {
+    width: 100%;
+    height: 200px;
+    /* OBJECT-FIT: Recorta la imagen desde el centro */
+    object-fit: cover;
+    /* OBJECT POSITION: 
+       - center: centrado horizontalmente.
+       - 30%: Lo acomoda, muestra mas arriba la imagen. */
+    object-position: center 30%;
+    border-radius: 1em 1em 0 0;
+}
+
+.carta-card {
+    background-color: var(--colorCards);
+    border-radius: 2em;
+}
+
+.carta-card h3 {
+    color: var(--colorPrimario);
+    margin: 0 .76em;
+    padding: .76em 0;
+
+}
+
+.carta-card p {
+    color: var(--colorPrimario);
+    margin-left: 1.6em;
+    padding: 1.6em 0;
+}
+
+.carta-card div {
+    margin: 0 1.6em;
+}
+
+@media screen and (max-width: 1023px) {
+    .carta-nav {
+        margin: 1em auto;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 1em;
+        background-color: var(--colorMenu-Sec);
+        width: max-content;
+    }
+
+
+    .card-grid {
+        width: 100%;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+
+/* --- FIN DE LA SECCION DE CARTA --- */
+/* --- INICIO DE LA SECCION DE CONTACTO--- */
+
+.seccion-contacto {
+    font-family: 'Modern Antiqua';
+    margin-top: 1.5em;
+    margin-bottom: 6em;
+}
+
+.titulo-contacto p {
+    min-height: 80px;
+}
+
+.titulo-contacto {
+    text-align: center;
+    margin: 2.4em;
+
+}
+
+.titulo-contacto h1 {
+    font-family: 'Poetsen One';
+    margin-bottom: 1em;
+    color: var(--colorPrimario);
+}
+
+.titulo-contacto div {
+    margin-bottom: 1em;
+    color: #D9A24A;
+    font-weight: 600;
+}
+
+.contenido {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+}
+
+.sec-ubicacion {
+    width: 30%
+}
+
+.contacto {
+    background-color: var(--colorCards);
+    border: .18em solid var(--colorSecundario);
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+.info {
+    margin: 1em 0 1em 2em;
+    color: var(--colorPrimario);
+}
+
+.titulo {
+    font-family: 'Poetsen One';
+    margin: 1em 0 0 1em;
+    color: var(--colorPrimario);
+}
+
+.contacto img {
+    width: 100%;
+    height: 200px;
+    /* OBJECT-FIT: Recorta la imagen desde el centro */
+    object-fit: cover;
+    /* OBJECT POSITION: 
+       - center: centrado horizontalmente.
+       - 30%: Lo acomoda, muestra mas arriba la imagen. */
+    object-position: center 30%;
+    border-radius: 1em 1em 0 0;
+}
+
+.card-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorCards);
+    border-radius: 1em;
+    border: .18em solid var(--colorSecundario);
+    padding: .8em 2em 0 2em;
+    color: var(--colorPrimario);
+}
+
+.card-form legend {
+    text-align: center;
+    font-family: 'Poetsen One';
+    margin: 1em 0 1em 0;
+}
+
+.card-form .input,
+.card-form .textarea {
+    width: 100%;
+    border-radius: 1em;
+    border: .1em solid var(--colorSecundario);
+    background-color: var(--colorCajadeTexto);
+    padding: .8em;
+    margin: 1em 0 1em 0;
+}
+
+.card-form .textarea {
+    min-height: 10em;
+    max-height: 10em;
+}
+
+.contacto-boton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--colorPrimario);
+    color: var(--colorFondoyTextos);
+    padding: .8em;
+    max-width: 60%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .8em;
+    margin-bottom: .8em;
+    border-radius: .8em;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .contenido {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sec-ubicacion, .card-form {
+        width: 90%
+    }
+    .contacto-boton{
+        font-size: .9em;
+        text-align: center;
+    }
+}
+
+/* --- FIN DE LA SECCION DE CONTACTO--- */
+
+
 /* --- ESTILOS PÁGINA DE NOSOTROS --- */
 /* ESTILOS CARD-NUESTRA HISTORIA */
 .cards-grid-nosotros {
@@ -504,3 +768,4 @@ header {
 }
 /* FIN ESTILOS CARD-NUESTRO COMPROMISO */
 /* --- FIN ESTILOS PÁGINA DE NOSOTROS --- */
+
