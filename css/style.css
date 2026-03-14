@@ -31,7 +31,7 @@
     font-size: 3em;
     position: fixed;
     bottom: 1.5em;
-    right: 1em;
+    right: .5em;
     background-color: var(--colorWhatsApp);
     padding: .2em;
     border-radius: 100%;
@@ -251,6 +251,7 @@ header {
     color: var(--colorPrimario);
     text-align: left;
     font-size: 1.2em;
+    margin-bottom: .5em;
 }
 
 /* FIN ESTILOS CARDS - PRODUCTOS Y CUALIDADES*/
@@ -371,40 +372,73 @@ header {
     padding: .5em;
 }
 
+@media screen and (max-width: 1023px) {
+    /* RWD HERO */
+    .hero,
+    .hero img,
+    .fondo-claro {
+        height: 300px;
+    }
+
+    .frase-h1 {
+        font-size: 1.4em;
+    }
+
+    .frase-h2 {
+        font-size: 1em;
+    }
+    /* FIN RWD HERO */
+    /* RWD FOOTER */
+    .title-center {
+        text-align: left;
+    }
+
+    .footer-icons {
+        justify-content: left;
+    }
+
+    .footer-box-horarios {
+        margin: 0;
+    }
+    /* FIN RWD FOOTER */
+}
+
 /* FIN ESTILOS FOOTER */
 /* --- FIN ESTILOS PÁGINA DE INICIO --- */
 
 /* --- ESTILOS PÁGINA DE NOSOTROS --- */
 /* ESTILOS CARD-NUESTRA HISTORIA */
-.cards-grid-nosotros{
+.cards-grid-nosotros {
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
 
-.card-nosotros{
+.card-nosotros {
     margin-bottom: .5em;
     padding: 2em;
 }
 
-.card-nosotros img{
+.card-nosotros img {
     border-radius: 1em;
     width: 100%;
-    height: 390px;
+    height: 390px;  
+    margin-top: 2.5em;  
 }
 
-.card-nosotros .frase-h1{
+.card-nosotros .frase-h1 {
     text-align: center;
     color: var(--colorPrimario);
     margin-bottom: .5em;
 }
 
-.card-nosotros .card-info{
+.card-nosotros .card-info {
     font-size: 1em;
 }
+
 /* FIN ESTILOS CARD-NEUSTRA HISTORIA */
 /* ESTILOS SLOGAN-FRASE */
-.slogan-frase{
+.slogan-frase {
     background-color: var(--colorFondoFrases);
     height: 8em;
     margin-bottom: 4em;
@@ -415,32 +449,58 @@ header {
     padding: 2em;
 }
 
-.slogan-frase .frase-h2{
+.slogan-frase .frase-h2 {
     color: var(--colorPrimario);
 }
+
 /* FIN ESTILOS SLOGAN-FRASE */
 
 /* ESTILOS CARD-NUESTRO COMPROMISO */
-.cards-grid-compromiso .card{
+.cards-grid-compromiso .card {
     margin-bottom: 4em;
     padding: 3.5em;
 }
 
-.cards-grid-compromiso .card .frase-h2{
+.cards-grid-compromiso .card .frase-h2 {
     color: var(--colorPrimario);
     text-align: center;
     margin-bottom: 1em;
 }
 
-.card-compromiso{
+.card-compromiso {
     font-family: 'Modern Antiqua';
     color: var(--colorTextos);
     font-size: 1em;
     text-align: left;
 }
 
-.card-compromiso strong{
+.card-compromiso strong {
     color: var(--colorPrimario);
+}
+
+@media screen and (max-width: 1023px) {
+    .cards-grid-nosotros {
+        grid-template-columns: 1fr;
+    }
+
+    .card-nosotros {
+        padding: 1em;
+    }
+
+    .card-nosotros img {
+        width: 100%;
+        height: auto;
+    }
+    .card-nosotros .card-info{
+        text-align: center;
+    }
+
+    .slogan-frase{
+        padding: 1.5em;
+    }
+    .cards-grid-compromiso .card{
+        padding: 2em;
+    }
 }
 /* FIN ESTILOS CARD-NUESTRO COMPROMISO */
 /* --- FIN ESTILOS PÁGINA DE NOSOTROS --- */
